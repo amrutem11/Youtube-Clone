@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        body{
+            background-color: rgba(15, 14, 14, 0.74);
+            color: white;
+        }
+        #navbar{
+            width: 95%;
+            height: 60px;
+            margin: auto;
+            display: grid;
+            margin: auto;
+            grid-template-columns: repeat(3,23% 50% 15%);
+            grid-template-rows: 60px;
+            gap: 10px;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0px;
+            
+        }
+        #navbar > div{
+            text-align:center ;
+            align-items: center;
+            border-radius: 10px;
+        }
+        #container{
+           
+            /* margin: auto; */
+            display: grid;
+            grid-template-columns: repeat(4,24%);
+            gap: 10px;
+            justify-content: space-between;
+            margin-left: 370px;
+            margin-top: 10px;
+            flex: 3;
+             /* position: relative;
+            top: 60px;
+            bottom: 0px;
+            right: 0px;
+            left: 380px; */ */
+           
+        }
+        #container > div{
+         height: 350px;
+         background-color: white;
+         color: black;
+         border-radius: 10px;
+         /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+     }
+        #container>div>img{
+            width: 100%;
+            height: 50%;  
+            border-radius: 10px; 
+        }
+      
+        #logo{
+            display: flex;
+        }
+        #logo > img{
+            width: 90%;
+            height: 100%;
+            cursor: pointer;
+        }
+        #query{
+            width: 230px;
+            padding: 10px;
+            margin-right: -30px;
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+        #search >button{
+            padding: 10px;
+            border-radius: 30px;
+            width: 60px;
+            cursor: pointer;
+        }
+        #last{
+            display: flex;
+            justify-content: space-around;
+        }
+        #last > div> img{
+            width: 80%;
+            height: 80%;
+            border-radius: 50px;
+        }
+        #last > div{
+            width: 30%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        h4,h5{
+            margin-left: 10px;
+        }
+        #home{
+            display: flex;
+            width: 95%;
+            margin: auto;
+          
+        }
+        #sidebar{
+            position: fixed;
+            top: 70px;
+            margin-top: 10px;
+            height: 100%;
+            width: 320px;
+           background-color: rgba(15, 14, 14, 0.526);
+            
+        }
+     
+        .side{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            justify-content: flex-start;
+            margin-left: 80px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        #sidebar > div{
+            text-align: center;
+        }
+        #sidebar :hover{
+            background-color: rgb(33, 35, 35);
+        }
+    
+       
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <i style="margin-left:20px" class="fa-solid fa-bars"></i>
+             <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAB4CAMAAAD7aI8VAAAAwFBMVEUAAAD+AAD////z8/MwMDA+Pj7k5OTw8PD29vY1NTUAAAPr6+vX19fo6OgXFxdra2t4eHgODg65ubmXl5dHR0fJBwrNzc3zMDL+9vaGhoYmJiZxcXGQkJBfX19VVVXDw8Oqqqr1AACqCgy7CAegoKBtCgp/CwsrBAc4BQbaCQjiCAhVBANgBQT2urnuBwiRCAcyBghIBwiGBgYgBQUUAQPzKinsZmboWllOAwT2pKP86+rtfnz61dbsOzrxmZXxdnUNVQMvAAAFiUlEQVR4nO2aa3uaSBSARxDkKqKGVhBEY2KjaW5tutnudvv//9XOOTMoBtBQwe7mOe+HSITBeT0zZy7IGEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEH8TqzGLvpfYFnWw+Pm6vr+frG4BC4k/HCxuL+/vto8Pghh6x1or64v1vPOUebri+uV1XSc+14URXGjtzzG7cVx2YyLjdRNBpwuHppwmFTf3/cGeTx/76ymcHS/omwbPLwlulvWK1FqpBiGMsHDKRyOqj8gDIw8jrl3VlO5sHNGYatGfDHGIsSRwes5w8OAH6le9Sd0HSWPHu6dPbewtbmrJ3z3Iuqp83q6eGhDjcPqj3gt3N07e3bhp3k94fmTCPGM19MAzTHUODjwEeHM1XVdyOq6G/xGYaj6ZT3fTmchhEcgEDHowpzBsY/ye8XgImeOsPWlZhfmnfirqCh04pQfDEH4aIX7KGwWT5y7ST+UCs8PCcs8bYus1YecpR/9nP+M8KebotLzt0OJ7OaTKJlCRTWWuPx1CW+Y8XQ0SUSr7ZuapoFeyF+1fk4Y3jB53/dN09RMXwrzVDCZelmL72uDySQa91vwtR7XRaUPyuc/qmO8fhRFY17RXswiaNF82hGmqshLODhHNh9xedz9IX9VvJwwvKFOuaCuqobbzYRT6CH6GO+czEQ+D8YtCL+UBPPDR+X7n3fzioZ9txFFQ5GsJlJkth13IIENoP42CMM7e8LwBp+mjKFL2FI4GEpFCGq3l93JKekCp7IpseLCivL9r+fyCGfC2HlTFBj6ImkbWFV7LIXdg8JuTliFyRrcANI+3FfpYXtZNi98WyWsKH9/m5fF+O5WFoXxKAhhgJ3y6SOK9VNZzZrCipPEPXkigaJDEWenZBw7CYtdlShJYeXj5x8lxvNM2OM1c02odsximXoYlJv16wobGmNLJddWYvF/r+lefFiYK//zXFCeX8nCJkwZPRDlgooclTFvaXWF4auKZSfGC3gan0jxZoWtw8K8K/98bbyNMOapmRDF6RbPvQy8ekltYV+uE53Qx+zH7zSQJZsVPhJhyF2FEGcRFpaiVth3YUCyRVx+VdgNRTbgd8Lx7uiUtWFhgzfpQoS3wqYhrmJS4zThrhAWa6u2hHmWPiAsklZ1k2ZiCRQUhL2ThePIW7YkXGixbx6WZENGz6aFYWukHeHqicfPdflUK5t4cBIU1loQzmhc2Ho8MLUsXzWtX7alcXbpdgvCp/fhQOA0vp1Zunj48abFQyastyHctOfW94Tl4Z5wA8OSiTfbDUstsSrbAKgOb2e3AbAnPJUaJ0w8xnCCTzwyYS1NR9Pm59L1t3guv5YI47QI1jb4zvhXhGGSCtPwbGoZi7bStLBV3MQ7GN9OZ7ErvhPG2gZSOAhZBBp8PcwKwmmpMJMnUrk7mLDtzkLTPJUOttXMn8qENUw14262PEygLxuTMdZ+TxgbvxPH2HK3y8Nlgn6QBnB5ONM0uMBtfs/Duq29Eb97mLYTFvHpobbKw9IX0wdbse1XwmLstlXFyQsrYpbqQkSxqNjIHraxuVf3UUuu6G4cZl1Mz0qWu+QkjM8cglfCTF7oxDlhuR+GC0z5leDX0sKmFmNfSkbiam5WuaKhoaqG3F3vB7hlYbhTcS7AXS2PDQ0VhV1DFc/RYozdzGSKqvKymq2qaqw5/HJDPKtiiYPx7gVtbFtybkuG4hLmGN9N/umwH0Ve5GXViqfLdDnRsnOTJf6TRB4+VvW2l2pTfhl/HXie54vnw10W8su388hwMFoup609NLbqPBBvqxJnRIZsJX7yIH/zkPvBA/ziIfeTh3eBhT9ksCzroJEl/74bbYIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIKo5F/mxHpZ3w30QAAAAABJRU5ErkJggg==" alt="">
+        </div>
+        <div id="search" >
+            <input id="query" placeholder="search" type="text">
+            <button  onclick="searchVideos()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-solid fa-microphone"></i></button>
+        </div>
+        <div id="last" >
+            <div><i class="fa-regular fa-bell"></i></div>
+            <div><img src="https://yt3.ggpht.com/yti/AJo0G0mViGxL-wivtNdWK4YqCOUSeB1PNgWA5eKx6QUdRQ=s88-c-k-c0x00ffffff-no-rj-mo" alt=""></div>
+            <button><a href="auth.html">Profile </a></button>
+        </div>
+    </div>
+    <div id="home">
+        <div id="sidebar" >
+            <div class="side">
+                <div><h3><i  class="fa-solid fa-house"></i> HOME</h3></div>
+            </div>
+            <div class="side">
+                <div><h3><i class="fa-regular fa-compass"></i> Explore</h3></div>
+            </div>
+            <div class="side">
+             <h3><i><span class="material-symbols-outlined">
+                subscriptions
+                </span>   </i> Subscriptions </h1>
+            </div>
+            <div class="side"><h3><i><span class="material-symbols-outlined">
+                video_library
+                </span>   </i> Library </h1>
+            </div>
+            <div class="side">
+                <div><h3><i class="fa-solid fa-clock-rotate-left"></i> History</h3></div>
+            </div>
+            <div class="side">
+                <div><h3><i class="fa-sharp fa-solid fa-video"></i> Your Videos</h3></div>
+            </div>
+            <div class="side">
+                <div><h3><i class="fa-regular fa-clock"></i> watch Later</h3></div>
+            </div>
+            <div class="side">
+                <div><h3><i class="fa-solid fa-thumbs-up"></i> Liked Videos</h3></div>
+            </div>
+
+        </div>
+        <div id="container"></div>
+    </div>
+</body>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+  <!-- <script src="video.js"></script> -->
+  
+</html>
+
+

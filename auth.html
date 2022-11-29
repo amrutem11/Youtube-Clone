@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        #container {
+            width: 90%;
+            height: 700px;
+            display: flex;
+            margin: auto;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #container > div {
+            width: 35%;
+            height: 80%;
+            background-color: rgb(221, 217, 217);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            text-align: center;
+            margin: auto;
+        }
+        form {
+            width: 90%;
+           
+            margin: auto;
+        }
+       
+        button {
+            margin-top: 2%;
+            width: 200px;
+            padding: 7px;
+            border-radius: 10px;
+            background-color: rgb(132, 226, 37);
+            color: white;
+            font-size: 20px;
+        }
+        /* form {
+            border: 2px solid black;
+        } */
+        input,label,text area {
+           width: 70%;
+            display: block;
+            margin: auto;
+            resize: vertical;
+            /* margin-top: 90px; */
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        /* #login-form{
+            background-color: aqua;
+        } */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="register_form" >
+            <h2>Register here</h2>
+            <form action="">
+                <label for="Name">Name:</label>
+                <input id="name" placeholder="Name" type="text">
+                <label for="email">Email:</label>
+                <input id="email" placeholder="Email" type="email">
+                <label for="username">Username:</label>
+                <input id="username" placeholder="Username" type="text">
+                <label for="password">Password:</label>
+                <input id="password" placeholder="Password" type="password">
+                <label for="mobile">Mobile:</label>               
+                <input id="mobile" placeholder="Mobile" type="number">
+                <label for="Description">Description:</label>
+                <input id="description" placeholder="Description" type="text">
+            </form>
+            <button onclick="Register()">Register</button>
+        </div>
+
+        <div id="login-form" >
+            <h2>Login</h2>
+            <form action="">
+                <label for="username">Username:</label>
+                <input id="login-username" placeholder="username" type="text">
+                <label for="password">Password:</label>
+                <input id="login-password" placeholder="password" type="text">
+            </form>
+            
+            <button onclick="Login ()">Login</button>
+
+            <h3>Forgot Password ?</h3>
+            <a href="">click here</a>
+        </div>
+    </div>
+</body>
+</html>
+<script src="auth.js"></script>
